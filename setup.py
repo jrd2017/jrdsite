@@ -8,11 +8,11 @@ with open('requirements.txt') as f:
 from linefood import __version__ as version
 
 setup(
-	name='linefood',
+	name='jrdsite',
 	version=version,
-	description='linefood application ',
-	author='ahmadragheb',
-	author_email='ahmedragheb75@gmail.com',
+	description='jrdsite application ',
+	author='jeffreyramirez',
+	author_email='admin@jeffreyramirez.net',
 	packages=find_packages(),
 	zip_safe=False,
 	include_package_data=True,
