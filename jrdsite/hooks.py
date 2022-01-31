@@ -78,7 +78,7 @@ web_include_js = [
 # ----------
 
 # application home page (will override Website Settings)
-home_page = "line_food"
+home_page = "jrd_site"
 
 # website user home page (by Role)
 # role_home_page = {
