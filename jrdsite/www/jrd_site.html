@@ -1,0 +1,164 @@
+{% extends 'templates/master.html' %}
+
+
+{% block foodline_content %}
+{% if homepage and homepage.products %}
+<section class="flat-row row-product-new">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="title-section margin-bottom-52">
+					<h2 class="title">
+						New Product
+					</h2>
+				</div>
+				<div class="product-content product-fourcolumn clearfix">
+					<ul class="product style2 clearfix">
+						{% for prod in homepage.products %}
+						<li class="product-item">
+							<div class="product-thumb clearfix">
+								<a href="#" class="product-thumb">
+									{% if prod.image %}
+									<img src="{{ prod.image }}" alt="image">
+									{% else %}
+									<img src="/assets/linefood/images/shop/sh-4/13.jpg" alt="image">
+									{% endif %}
+								</a>
+								<span class="new">New</span>
+							</div>
+							<div class="product-info text-center clearfix">
+								<span class="product-title">{{ prod.item_name }}</span>
+								<div class="price">
+									<ins>
+										<span class="amount">$100.00</span>
+									</ins>
+								</div>
+								<ul class="flat-color-list width-14">
+									<li>
+										<a href="#" class="red"></a>
+									</li>
+									<li>
+										<a href="#" class="blue"></a>
+									</li>
+									<li>
+										<a href="#" class="black"></a>
+									</li>
+								</ul>
+							</div>
+							<div class="add-to-cart text-center">
+								<a href="#">ADD TO CART</a>
+							</div>
+							<a href="#" class="like"><i class="fa fa-heart-o"></i></a>
+						</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% endif %}
+
+{% if blogs %}
+<section class="flat-row row-new-latest style-1">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="title-section margin-bottom-51">
+					<h2 class="title">Blogs</h2>
+				</div>
+				<div class="new-latest-wrap">
+					<div class="flat-new-latest post-wrap flat-carousel-box style4 data-effect clearfix" data-auto="false" data-column="3" data-column2="2" data-column3="1" data-gap="30">
+						<div class="owl-carousel owl-theme owl-loaded owl-drag">
+							{% for blog in blogs %}
+							<div class="owl-stage-outer">
+								<div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 2400px;">
+									<div class="owl-item active" style="width: 370px; margin-right: 30px;">
+										<article class="post clearfix">
+											<div class="featured-post data-effect-item">
+
+												{% if blog.image %}
+												<img src="{{ blog.image }}" alt="image" style="width: 370px; height: 245px">
+												{% else %}
+												<img src="/assets/linefood/images/blog/new-lastest-8-370x280.jpg" alt="image">
+												{% endif %}
+
+												<div class="overlay-effect bg-color-2" style="display: block; left: -100%; top: 0px; transition: all 300ms ease 0s;"></div>
+											</div>
+											<div class="content-post">
+												<ul class="meta-post">
+													<li class="date">
+														{{ blog.published_on }}
+													</li>
+													<li class="author">
+														<a href="#">{{blog.blogger}}</a>
+													</li>
+												</ul>
+												<div class="title-post">
+													<h2><a href="blog-detail.html">{{blog.title}}</a></h2>
+												</div>
+												<div class="entry-post">
+													<div class="more-link">
+														<a href="{{blog.route}}">Continue Reading</a>
+													</div>
+												</div>
+											</div>
+										</article>
+									</div>
+								</div>
+							</div>
+							{% endfor %}
+							<div class="owl-nav">
+								<div class="owl-prev disabled">prev</div>
+								<div class="owl-next">next</div>
+							</div>
+							<div class="owl-dots">
+								<div class="owl-dot active">
+									<span></span>
+								</div>
+								<div class="owl-dot">
+									<span></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% endif %}
+
+<section class="flat-row mail-chimp">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="text">
+					<h3>Sign up for Send Newsletter</h3>
+				</div>
+			</div>
+			<div class="col-md-8">
+				<div class="subscribe clearfix">
+					<form action="#" method="post" accept-charset="utf-8" id="subscribe-form">
+						<div class="subscribe-content">
+							<div class="input">
+								<input type="email" name="subscribe-email" placeholder="Your Email">
+							</div>
+							<div class="button">
+								<button type="button">SUBCRIBE</button>
+							</div>
+						</div>
+					</form>
+					<ul class="flat-social">
+						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="#"><i class="fa fa-google"></i></a></li>
+						<li><a href="#"><i class="fa fa-behance"></i></a></li>
+						<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+					</ul><!-- /.flat-social -->
+				</div><!-- /.subscribe -->
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock %}
