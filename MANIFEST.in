@@ -4,15 +4,15 @@ include *.json
 include *.md
 include *.py
 include *.txt
-recursive-include linefood *.css
-recursive-include linefood *.csv
-recursive-include linefood *.html
-recursive-include linefood *.ico
-recursive-include linefood *.js
-recursive-include linefood *.json
-recursive-include linefood *.md
-recursive-include linefood *.png
-recursive-include linefood *.py
-recursive-include linefood *.svg
-recursive-include linefood *.txt
-recursive-exclude linefood *.pyc
+recursive-include jrdsite *.css
+recursive-include jrdsite *.csv
+recursive-include jrdsite *.html
+recursive-include jrdsite *.ico
+recursive-include jrdsite *.js
+recursive-include jrdsite *.json
+recursive-include jrdsite *.md
+recursive-include jrdsite *.png
+recursive-include jrdsite *.py
+recursive-include jrdsite *.svg
+recursive-include jrdsite *.txt
+recursive-exclude jrdsite *.pyc
